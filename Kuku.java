@@ -40,7 +40,7 @@ public class Kuku {
 			int var;
 			var = 0;
 			// ↓段の区切りバー（アンダーバー（_））を33回繰り返し表示させる
-			while (var <= 4 * k) {
+			while (var <= 33) {
 				System.out.print("_");
 				// ↓バーを33回表示させたらループを抜けるためにどんどん1足していく
 				var += 1;
