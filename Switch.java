@@ -18,14 +18,19 @@ public class Switch {
 			// 例外処理
 			try {
 				cmd = sc.nextInt(); // 番号(整数値)の入力処理
+				//例外の時の処理
 			} catch (NumberFormatException e) {
 				System.out.println("***　文字列入れないでね　***");
 			} catch (InputMismatchException e) {
 				System.out.println("***　文字列入れないでね　***");
+				//例外処理終了時必ず行う処理
 			} finally {
+				//例外処理は変数ではなくバッファで行うのでバッファ初期化
 				sc.nextLine(); // scバッファ取り出して初期化
+				//よくわからないけど変数もおまじないで初期化
 				cmd = 0;
 			}
+			//hpが8以上の時は寝られなくする
 			if (hp > 8 && cmd == 3) {
 				System.out.println("***　休みすぎてこれ以上休めない　***");
 			} else {
